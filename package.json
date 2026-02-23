@@ -1,0 +1,10 @@
+{
+  "name": "momiji-core",
+  "private": true,
+  "scripts": {
+    "dev": "browser-sync start --config bs-config.js --host 0.0.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.3"
+  }
+}

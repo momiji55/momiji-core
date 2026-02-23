@@ -1,0 +1,18 @@
+<?php
+/**
+ * Footer template
+ *
+ * @package momiji-core
+ */
+?>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-copyright">&copy; <?php echo esc_html(wp_date('Y')); ?> <?php echo esc_html(get_bloginfo('name')); ?></p>
+  </div>
+</footer>
+
+<?php wp_footer(); ?>
+</body>
+</html>

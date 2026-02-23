@@ -1,0 +1,270 @@
+/*
+Theme Name: momiji-core
+Text Domain: momiji-core
+Version: 0.1.0
+Requires at least: 6.0
+Requires PHP: 7.4
+Description: Minimal starter theme for portfolio and custom development.
+Author: Momiji
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  color: #222;
+  background: #f7f5f0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Kaku Gothic ProN',
+    'Hiragino Sans', 'Yu Gothic UI', 'Yu Gothic', Meiryo, sans-serif;
+  line-height: 1.7;
+}
+
+/* ---------------------------------
+   Base
+--------------------------------- */
+a {
+  color: #b21f3a;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.6em;
+  line-height: 1.35;
+}
+
+.main {
+  display: block;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+/* ---------------------------------
+   Header
+--------------------------------- */
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid #e8e1d6;
+}
+
+.header-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.ttl {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+
+.ttl a {
+  color: #b21f3a;
+  text-decoration: none;
+}
+
+.description {
+  margin: 8px 0 0;
+  color: #6d6d6d;
+  font-size: 0.95rem;
+}
+
+/* ---------------------------------
+   Post list / article card
+--------------------------------- */
+.posts {
+  display: grid;
+  gap: 24px;
+}
+
+.post-item {
+  margin: 0;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e8e1d6;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.post-item-header {
+  margin-bottom: 12px;
+}
+
+.post-item-title {
+  margin: 0;
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  font-weight: 700;
+  word-break: break-word;
+}
+
+.post-item-title a {
+  color: #222;
+  text-decoration: none;
+}
+
+.post-item-title a:hover {
+  color: #b21f3a;
+  text-decoration: none;
+}
+
+.post-item-content {
+  color: #333;
+}
+
+.post-item-content > *:last-child {
+  margin-bottom: 0;
+}
+
+/* WordPress core output */
+.post-item-content .wp-caption {
+  max-width: 100%;
+}
+
+.post-item-content .wp-caption-text {
+  margin-top: 8px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.post-item-content .alignleft {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+.post-item-content .alignright {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+.post-item-content .aligncenter {
+  display: block;
+  margin: 0 auto 1em;
+}
+
+.post-item::after,
+.post-item-content::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---------------------------------
+   Pagination inside post (wp_link_pages)
+--------------------------------- */
+.page-links {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #eee4d7;
+  font-size: 0.95rem;
+}
+
+.page-links-title {
+  margin-right: 8px;
+  font-weight: 700;
+}
+
+/* ---------------------------------
+   Posts navigation (the_posts_navigation)
+--------------------------------- */
+.navigation.posts-navigation {
+  margin-top: 28px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #e8e1d6;
+  border-radius: 12px;
+}
+
+.navigation.posts-navigation .nav-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.navigation.posts-navigation a {
+  display: inline-block;
+  padding: 10px 14px;
+  background: #fff7ef;
+  border: 1px solid #edd9bf;
+  border-radius: 8px;
+  color: #7a4c00;
+  text-decoration: none;
+}
+
+.navigation.posts-navigation a:hover {
+  background: #f8eedf;
+  text-decoration: none;
+}
+
+/* ---------------------------------
+   No posts
+--------------------------------- */
+.no-posts {
+  padding: 28px 24px;
+  background: #ffffff;
+  border: 1px solid #e8e1d6;
+  border-radius: 12px;
+}
+
+.no-posts-title {
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+}
+
+.no-posts-text {
+  margin: 0;
+  color: #555;
+}
+
+/* ---------------------------------
+   Footer
+--------------------------------- */
+.footer {
+  border-top: 1px solid #e8e1d6;
+  background: #ffffff;
+}
+
+.footer-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 20px 16px 28px;
+}
+
+.footer-copyright {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
