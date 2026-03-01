@@ -18,20 +18,20 @@
 <?php wp_body_open(); ?>
 
 <header class="header">
-  <div class="header-inner">
+  <div class="inner">
     <?php if (is_front_page() && is_home()) : ?>
-      <h1 class="ttl">
-          <a href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html(get_bloginfo('name')); ?></a>
+      <h1 class="header-ttl">
+          <a class="header-ttl-link" href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html(get_bloginfo('name')); ?></a>
       </h1>
     <?php else : ?>
-      <p class="ttl">
-          <a href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html(get_bloginfo('name')); ?></a>
+      <p class="header-ttl">
+          <a class="header-ttl-link" href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html(get_bloginfo('name')); ?></a>
       </p>
     <?php endif; ?>
 
     <?php $siteDescription = get_bloginfo('description'); ?>
     <?php if ($siteDescription) : ?>
-      <p class="description"><?php echo esc_html($siteDescription); ?></p>
+      <p class="header-description"><?php echo esc_html($siteDescription); ?></p>
     <?php endif; ?>
   </div>
 </header>
