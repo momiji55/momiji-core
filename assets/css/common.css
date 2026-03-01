@@ -1,0 +1,389 @@
+/* =========================
+  Base
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Hiragino Kaku Gothic ProN',
+    'Hiragino Sans',
+    Meiryo,
+    sans-serif;
+  font-size: 16px;
+  color: #333;
+  background: #fff;
+  line-height: 1.6;
+}
+
+p + p {
+  margin-top: 1em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input {
+  font-size: inherit;
+  line-height: 1;
+  background: #fff;
+}
+
+a {
+  color: #1a73e8;
+}
+
+/* キーボード操作時の視認性 */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline-offset: 2px;
+}
+
+/* =========================
+  Layout
+========================= */
+.main {
+  flex: 1;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive */
+@media screen and (min-width: 480px) {
+  .inner {
+    padding: 0 32px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .inner {
+    padding: 0 48px;
+  }
+}
+
+
+/* =========================
+  Header
+========================= */
+.header {
+  padding: 12px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.header-ttl {
+  margin: 0;
+  font-size: clamp(1.375rem, 2.2vw, 1.875rem);
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.header-ttl-link {
+  color: #111827;
+  text-decoration: none;
+}
+
+.header-ttl-link:hover,
+.header-ttl-link:focus {
+  text-decoration: underline;
+}
+
+.header-description {
+  margin: 8px 0 0;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+/* =========================
+  Posts list
+========================= */
+
+.posts {
+  display: grid;
+  gap: 20px;
+}
+
+.post-item {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 4%);
+}
+
+.post-item-header {
+  margin-bottom: 12px;
+}
+
+.post-item-title {
+  margin: 0;
+  line-height: 1.4;
+  font-size: clamp(1.125rem, 1.5vw, 1.375rem);
+  word-break: break-word;
+}
+
+.post-item-title a {
+  color: #111827;
+  text-decoration: none;
+}
+
+.post-item-title a:hover,
+.post-item-title a:focus {
+  color: #1a73e8;
+  text-decoration: underline;
+}
+
+.post-item-content > *:first-child {
+  margin-top: 0;
+}
+
+.post-item-content > *:last-child {
+  margin-bottom: 0;
+}
+
+.post-item-content p,
+.post-item-content ul,
+.post-item-content ol,
+.post-item-content blockquote,
+.post-item-content pre,
+.post-item-content table {
+  margin: 0 0 1em;
+}
+
+.post-item-content h1,
+.post-item-content h2,
+.post-item-content h3,
+.post-item-content h4,
+.post-item-content h5,
+.post-item-content h6 {
+  margin: 1.4em 0 0.6em;
+  line-height: 1.4;
+}
+
+.post-item-content ul,
+.post-item-content ol {
+  padding-left: 1.4em;
+}
+
+.post-item-content blockquote {
+  margin-left: 0;
+  padding: 0.75em 1em;
+  border-left: 4px solid #d1d5db;
+  background: #f9fafb;
+  color: #374151;
+}
+
+.post-item-content pre {
+  overflow-x: auto;
+  padding: 12px;
+  border-radius: 8px;
+  background: #111827;
+  color: #f9fafb;
+  line-height: 1.5;
+}
+
+.post-item-content code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9em;
+}
+
+.post-item-content :not(pre) > code {
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.post-item-content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.post-item-content th,
+.post-item-content td {
+  border: 1px solid #e5e7eb;
+  padding: 10px 12px;
+  text-align: left;
+  background: #fff;
+}
+
+.post-item-content th {
+  background: #f9fafb;
+}
+
+/* =========================
+  Pagination (wp_link_pages)
+========================= */
+
+.page-links {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.page-links-title {
+  margin-right: 8px;
+  font-weight: 600;
+}
+
+/* =========================
+  No posts
+========================= */
+
+.no-posts {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 4%);
+}
+
+.no-posts-title {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.no-posts-text {
+  margin: 0;
+  color: #4b5563;
+}
+
+/* =========================
+  Footer
+========================= */
+.footer {
+  padding: 12px 0;
+  background: #333;
+}
+
+.footer-copyright {
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* =========================
+  WordPress utility classes (最低限)
+========================= */
+
+.aligncenter {
+  display: block;
+  margin-inline: auto;
+}
+
+.alignleft {
+  float: left;
+  margin: 0.25em 1em 0.75em 0;
+}
+
+.alignright {
+  float: right;
+  margin: 0.25em 0 0.75em 1em;
+}
+
+.wp-caption {
+  max-width: 100%;
+  margin-bottom: 1em;
+}
+
+.wp-caption-text {
+  margin-top: 0.5em;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.gallery {
+  display: grid;
+  gap: 12px;
+}
+
+.screen-reader-text {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
+.screen-reader-text:focus {
+  clip-path: none;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 8px 12px;
+  background: #fff;
+  color: #111;
+  z-index: 100000;
+}
+
+/* =========================
+  Search Form
+========================= */
+.search-form {
+  display: flex;
+  align-items: stretch;
+}
+
+.search-form-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+}
+
+.search-form-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  padding: 8px;
+  color: #fff;
+  background: #333;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.search-form-submit:hover {
+  opacity: 0.8;
+}
