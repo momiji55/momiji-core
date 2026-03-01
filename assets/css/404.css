@@ -1,0 +1,91 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-404 {
+  text-align: center;
+}
+
+.error-404-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.error-404-lead {
+  margin: 24px 0 0;
+  font-size: 18px;
+}
+
+.error-404-content {
+  margin: 32px 0 0;
+}
+
+.error-404-search {
+  max-width: 560px;
+  margin: 40px auto 0;
+  text-align: left;
+}
+
+.error-404-actions {
+  margin: 48px 0 0;
+}
+
+.error-404-home-link {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 240px;
+  margin: 0 auto;
+  padding: 8px 28px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+.error-404-home-link::before {
+  position: absolute;
+  top: calc(50% + 1px);
+  right: 12px;
+  width: 16px;
+  height: 0;
+  border-bottom: 1px solid #ccc;
+  content: "";
+}
+
+.error-404-home-link::after {
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 12px;
+  width: 4px;
+  height: 0;
+  border-bottom: 1px solid #ccc;
+  transform: rotate(45deg);
+  content: "";
+}
+
+.error-404-home-link:hover {
+  color: #fff;
+  background: #333;
+}
+
+.error-404-home-link:hover::before,
+.error-404-home-link:hover::after {
+  border-bottom-color: #fff;
+}
+
+/* =========================
+  Responsive
+========================= */
+@media screen and (min-width: 768px) {
+  .error-404-title {
+    font-size: 48px;
+  }
+
+  .error-404-search {
+    margin: 60px auto 0;
+  }
+}
